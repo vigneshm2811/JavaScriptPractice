@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Data Types</h1>
+      <a href="https://www.w3schools.com/js/js_datatypes.asp"> To know more</a>
+
+
+   <script>
+    let num = 22; // number
+    let name = "vignesh" // string
+    let married = false;
+    let pi =3.14;
+    let fav = ['DTG','fury','beast','wolf'];
+    let phone = null;
+    console.log(num);
+
+    console.log("3.14 is a "+typeof pi)
+    console.log("Array "+typeof fav)
+    console.log("null "+typeof phone)
+    console.log(fav)
+
+    // Type conversion
+
+    console.log("Number before: " +typeof num)
+    num= String(num);
+    console.log("Number After coverestion: " +typeof num)
+    name = Number(name)
+    console.log("Name After coverestion to number: " +name)
+    console.log("Name After coverestion to number: " +typeof name)
+
+    let z = BigInt("123456789012345678901234567890");
+    console.log("value of Z: " +z)
+    console.log("type of Z: " +typeof z)
+    
+
+    
+    </script>
+   
+</body>
+</html>
