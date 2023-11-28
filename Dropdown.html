@@ -4,8 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dropdown JS</title>
+    <style>
+        
+
+
+        .custom-select {
+  min-width: 350px;
+  position: relative;
+}
+
+select {
+  appearance: none;
+  /*  safari  */
+  -webkit-appearance: none;
+  /*  other styles for aesthetics */
+  width: 100%;
+  font-size: 1.15rem;
+  padding: 0.675em 6em 0.675em 1em;
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
+}
+
+.custom-select::before,
+.custom-select::after {
+  --size: 0.3rem;
+  content: "";
+  position: absolute;
+  right: 1rem;
+  pointer-events: none;
+}
+
+.custom-select::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid black;
+  top: 40%;
+}
+
+.custom-select::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid black;
+  top: 55%;
+}
+
+
+/*=============
+Aesthetics 
+=========================*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+    </style>
 </head>
 <body>
+    <!-- Generating a dorpdown list using JS[array] -->
+    <div class="custom-select">
+          
+            <select name="" id="dropdown">
+
+            </select>
+        </div>
+        <script src="./dropDown.js"></script>
+        <script>
+            let dataArr = [`HTML`,`CSS`,`JS`,`React`]
+
+let dropdown = document.getElementById("dropdown");
+// using for of 
+
+// for(let data of dataArr){
+//     let options = document.createElement('option');
+//     options.innerHTML= data;
+//     dropdown.appendChild(options);
+// }
+// using forEach method
+dataArr.forEach(val =>{
+    let options = document.createElement('option');
+    options.innerHTML= val;
+    dropdown.appendChild(options);
+})
+const prod = function(){
+    // console.log(arguments)
+    let result=1;
+    for(let val of arguments){
+        result *= val;
     
+    }
+    return result
+}
+
+// console.log(prod(26,465,89))
+        </script>
 </body>
 </html>
